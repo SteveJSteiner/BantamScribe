@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:BantamScribe"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize" WindowStyle="None"
-        Background="Black">
+        Background="Black"
+        LostFocus="Window_LostFocus"
+        GotFocus="Window_GotFocus">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>

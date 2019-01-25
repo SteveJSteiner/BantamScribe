@@ -27,6 +27,7 @@ namespace BantamScribe
         int wordCount = 0;
         bool inWord = false;
         System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+        char lastChar = ' ';
 
         public MainWindow()
         {
@@ -86,7 +87,15 @@ namespace BantamScribe
             {
                 inWord = true;
             }
-            this.CharWindow.Text = c.ToString();
+            if (c == lastChar)
+            {
+                this.CharWindow.Text += c.ToString();
+            }
+            else
+            {
+                this.CharWindow.Text = c.ToString();
+            }
+            lastChar = c;
             text.Append(c);
             ProgressBar.Value = wordCount;
         }
@@ -150,6 +159,18 @@ namespace BantamScribe
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Window_LostFocus(object sender, RoutedEventArgs e)
+        {
+            this.CharWindow.Background = Brushes.AntiqueWhite;
+            Mouse.OverrideCursor = Cursors.Arrow;
+        }
+
+        private void Window_GotFocus(object sender, RoutedEventArgs e)
+        {
+            this.CharWindow.Background = Brushes.Black;
+            Mouse.OverrideCursor = Cursors.None;
         }
     }
 }
