@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize" WindowStyle="None"
         Background="Black"
-        LostFocus="Window_LostFocus"
-        GotFocus="Window_GotFocus">
-    <Grid>
+        LostKeyboardFocus="Window_LostKeyboardFocus"
+        GotKeyboardFocus="Window_GotKeyboardFocus">
+    <Grid x:Name="TopGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="3"></RowDefinition>

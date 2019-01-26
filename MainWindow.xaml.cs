@@ -161,15 +161,15 @@ namespace BantamScribe
             this.Close();
         }
 
-        private void Window_LostFocus(object sender, RoutedEventArgs e)
+        private void Window_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            this.CharWindow.Background = Brushes.AntiqueWhite;
+            this.TopGrid.Background = Brushes.Firebrick;
             Mouse.OverrideCursor = Cursors.Arrow;
         }
 
-        private void Window_GotFocus(object sender, RoutedEventArgs e)
+        private void Window_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            this.CharWindow.Background = Brushes.Black;
+            this.TopGrid.Background = Brushes.Black;
             Mouse.OverrideCursor = Cursors.None;
         }
     }
