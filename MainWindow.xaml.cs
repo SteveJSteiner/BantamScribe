@@ -48,24 +48,11 @@ namespace BantamScribe
         {
             base.OnKeyDown(e);
 
-            if (e.Key == Key.Escape && this.Editor.Visibility == Visibility.Hidden)
+            if (e.Key == Key.Escape)
             {
-                this.Editor.Visibility = Visibility.Visible;
-                this.QuitBtn.Visibility = Visibility.Visible;
-                this.CmdButtonRow.Height = new GridLength(30.0);
                 var t = text.ToString();
-                this.Editor.AppendText(t);
                 Clipboard.SetText(t);
-                Mouse.OverrideCursor = Cursors.Arrow;
-            }
-            else
-            {
-                Mouse.OverrideCursor = Cursors.None;
-                this.Editor.Visibility = Visibility.Hidden;
-                this.QuitBtn.Visibility = Visibility.Collapsed;
-                this.CmdButtonRow.Height = new GridLength(0.0);
-                this.Editor.Document.Blocks.Clear();
-                Mouse.OverrideCursor = Cursors.None;
+                this.Close();
             }
 
             char? ckey = GetCharFromKey(e.Key);
@@ -154,11 +141,6 @@ namespace BantamScribe
                     }
             }
             return ch;
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
 
         private void Window_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)

@@ -12,8 +12,8 @@
     <Grid x:Name="TopGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="3"></RowDefinition>
-            <RowDefinition Height="3"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="10"></RowDefinition>
             <RowDefinition x:Name="CmdButtonRow" Height="0"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,8 +24,5 @@
                    Foreground="AntiqueWhite"></TextBlock>
         <ProgressBar Grid.ColumnSpan="2" Grid.Row="1" x:Name="ProgressBar" Minimum="0" Maximum="1000" Background="Black" BorderThickness="0"></ProgressBar>
         <ProgressBar Grid.ColumnSpan="2" Grid.Row="2" x:Name="TimeBar" Minimum="0" Maximum="900" Background="Black" Foreground="Red" BorderThickness="0"></ProgressBar>
-        <RichTextBox Grid.ColumnSpan="2" x:Name="Editor" Visibility="Hidden" Grid.Row="0" Background="AntiqueWhite" BorderThickness="4" FontSize="16"
-                     IsReadOnly="True"></RichTextBox>
-        <Button x:Name="QuitBtn" Grid.Column="0" Grid.Row="3" Visibility="Collapsed"  Click="Button_Click">Quit</Button>
     </Grid>
 </Window>
