@@ -18,6 +18,6 @@ Micro FAQ:
     - All the words you type are captured, and ready to be pasted into an editor after hitting ESC.
 
 * What if my computer dies? 
-    - Then you lost work 15 minutes of work. Nothing is saved to disk until you save it in some other program.
+    - Then you lost 15 minutes of work. Nothing is saved to disk until you save it in some other program.
 
 
