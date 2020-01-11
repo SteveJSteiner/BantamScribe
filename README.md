@@ -15,7 +15,7 @@ Micro FAQ:
     - The red bar stops progressing. You've lost nothing beyond the joy of beating the timer.
 
 * What if I type more than 1000 words? 
-    - All the words you type are captured, and ready to be pasted into an editor after hitting ESC.
+    - Everything you type is ready to paste into an editor after hitting ESC.
 
 * What if my computer dies? 
     - Then you lost 15 minutes of work. Nothing is saved to disk until you save it in some other program.
